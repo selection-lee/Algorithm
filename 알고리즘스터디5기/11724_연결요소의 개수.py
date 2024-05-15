@@ -1,3 +1,5 @@
+# N: 노드 개수
+# M: 간선 개수
 N, M = map(int, input().split())
 arr = [list(map(int, input().split())) for _ in range(M)]
 
