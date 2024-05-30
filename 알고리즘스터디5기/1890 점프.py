@@ -25,10 +25,10 @@ for r in range(N):
         if dp[r][c] and board[r][c]:
             # 점프한 좌표가 범위 내에 있으면 점프
             # 오른쪽 먼저 가볼까?
-            if c + dc[0]*board[r][c] < N: # 점프한 열 좌표가 범위 내에 있으면
-                dp[r][c + dc[0]*board[r][c]] += dp[r][c]
+            if c + dc[0] * board[r][c] < N:  # 점프한 열 좌표가 범위 내에 있으면
+                dp[r][c + dc[0] * board[r][c]] += dp[r][c]
             # 다음은 아래쪽
-            if r + dr[1]*board[r][c] < N:
-                dp[r + dr[1]*board[r][c]][c] += dp[r][c]
+            if r + dr[1] * board[r][c] < N:
+                dp[r + dr[1] * board[r][c]][c] += dp[r][c]
 
 print(dp[-1][-1])
